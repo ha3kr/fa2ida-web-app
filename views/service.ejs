@@ -1,0 +1,14 @@
+<%- include('./includes/header.ejs'); %>
+
+    <section class="service-page container">
+        <% if (locals.service) { %>
+        <h3><%= service.title %></h3>
+        <img src="<%= service.photo %>" alt="">
+        <p><%= service.description %></p>
+        <p class="price">الثمن : <%= service.price %></p>
+        <span>لشراء الخدمة تواصل معنا :</span>
+        <a href="https://api.whatsapp.com/message/QG6V5HBSINNIC1" target="_blank"><i class="bi bi-whatsapp"></i> WhatsApp</a>
+        <% } %>
+    </section>
+
+<%- include('./includes/footer.ejs'); %>

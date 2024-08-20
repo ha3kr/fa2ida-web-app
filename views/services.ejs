@@ -1,0 +1,56 @@
+<%- include('./includes/header.ejs'); %>
+
+    <section class="services-page">
+        <div class="container">
+            <div class="title title-edit">
+                <h3>خدمات <%= locals.category %></h3>
+            </div>
+            <div class="services-cards">
+                <% if (locals.services) { %>
+                    <% services.forEach(service => { %>
+                <div class="service-card">
+                    <a href="/service/<%= service._id %>" class="service-card-head">
+                        <img src="<%= service.photo %>" alt="">
+                    </a>
+                    <a href="#" class="service-card-body">
+                        <h3><%= service.title %></h3>
+                        <p><%= service.description %></p>
+                    </a>
+                    <div class="service-card-footer">
+                        <span><%= service.price %>dh</span>
+                        <div class="stars">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star"></i>
+                        </div>
+                    </div>
+                </div>
+                    <% }) %>
+                <% } else { %>
+                <div class="service-card">
+                    <a href="#" class="service-card-head">
+                        <img src="/assets/images/socialmedia.png" alt="">
+                    </a>
+                    <a href="#" class="service-card-body">
+                        <h3>خدمات الفيس بوك</h3>
+                        <p>ستظل البيانات السابقة متوفِّرة في واجهات إعداد التقارير لكل المواقع، ولكن لن يَعُد بالإمكان تسجيل أدوات قياس معينة وإعداد التقارير عنها للأنشطة التجارية الموجودة في أوروبا أو اليابان. بالنسبة إلى الأنشطة التجارية الموجودة خارج أوروبا أو اليابان وتتلقى رسائل من كل من المواقع المتأثرة وغير المتأثرة، قد تعرض أدوات القياس المرتبطة بالمراسلات بيانات جزئية متعلقة بالمواقع غير المتأثرة.</p>
+                    </a>
+                    <div class="service-card-footer">
+                        <span>100 dh</span>
+                        <div class="stars">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <% } %>
+            </div>
+        </div>
+    </section>
+
+<%- include('./includes/footer.ejs'); %>

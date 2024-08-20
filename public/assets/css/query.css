@@ -1,0 +1,105 @@
+@media only screen and (max-width: 768px) {
+    html {
+        font-size: 12px;
+    }
+    .header .container #nav-toggle {
+        display: block;
+    }
+    .header .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    .header .container i {
+        display: block;
+        position: absolute;
+        right: 0;
+        cursor: pointer;
+        font-size: 1.5rem;
+    }
+    .header nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: -999px;
+        height: 100vh;
+        width: 50%;
+        background-color: #fff;
+        box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
+        gap: 1rem;
+        transition: .5s all linear;
+        z-index: 1
+    }
+    .header nav a {
+        color: #333 !important;
+    }
+    .header nav input {
+        padding: 1rem;
+        background: var(--secondary-color);
+        border: solid 1px #ccc;
+        border-radius: 10rem;
+        outline: none;
+    }
+    .header .search,
+    .header .btns {
+        display: none
+    }
+    .header .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+        background-color: rgba(0,0,0,.7);
+        z-index: 1;
+        transition: .5s all linear;
+    }
+    .hero {
+        grid-template-columns: 1fr;
+    }
+    .how-it-works .bi-arrow-left {
+        display: none;;
+    }
+    .service-page img {
+        width: 100%;
+    }
+    .container-custom {
+        width: 80vw;
+        margin: auto;
+    }
+    footer .footer-top {
+        flex-grow: 1;
+        grid-template-columns: repeat(auto-fit, minmax(15.625rem, 1fr));
+        gap: 2rem;
+        padding: 2rem 0;
+    }
+    footer .footer-bottom,
+    footer .footer-bottom .logos {
+        flex-direction: column;
+    }
+    .contact-us .contact-card {
+        flex-direction: column;
+    }
+    .contact-us .contact-card hr {
+        order: 2;
+        width: 50%;
+        height: 0;
+        border: solid 1px #ccc;
+    }
+    .contact-us .contact-card .contact-form {
+        order: 3;
+    }
+    .contact-us .contact-card .our-contact-info {
+        order: 1;
+        flex-direction: row;
+        gap: 2rem;
+    }
+    .terms-conditions, .privacy-policy {
+        font-size: 1rem;
+    }
+}

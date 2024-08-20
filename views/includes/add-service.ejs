@@ -1,0 +1,40 @@
+<div class="add-service">
+    <div class="text">Add Service</div>
+    <form action="/dashboard/add" method="post">
+        <div class="form-group">
+            <label for="">Service Title :</label>
+            <input type="text" name="title" placeholder="عنوان الخدمة ....">
+        </div>
+
+        <div class="form-group">
+            <label for="">Service Photo :</label>
+            <input type="text" name="photo" placeholder="صورة الخدمة ....">
+        </div>
+
+        
+        <div class="form-group">
+            <label for="">Service Price :</label>
+            <input type="number" name="price" placeholder="ثمن الخدمة ....">
+        </div>
+        <div class="form-group">
+            <label for="">Service Category :</label>
+            <select name="category">
+                <option value="default">تصنيف الخدمة ....</option>
+                <option value="facebook">فيسبوك</option>
+                <option value="ecommerce_store">متجر الكتروني</option>
+                <option value="youtube">يوتيوب</option>
+                <option value="instagram">انستقرام</option>
+                <option value="tiktok">تيك توك</option>
+                <option value="google_seo">جوجل seo</option>
+                <option value="web_design">تصميم مواقع الويب</option>
+                <option value="video_editing">فيديو</option>
+            </select>
+        </div>
+        <div class="form-group two-columns">
+            <label for="">Service Description :</label>
+            <textarea name="desc" id="" placeholder="وصف الخدمة ...." cols="30" rows="10"></textarea>
+        </div>
+
+        <button type="submit" class="two-columns">Add Service</button>
+    </form>
+</div>

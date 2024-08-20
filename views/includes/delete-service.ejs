@@ -1,0 +1,32 @@
+<table>
+    <thead>
+        <tr>
+            <th>عنوان الخدمة</th>
+            <th>صورة الخدمة</th>
+            <th>تصنيف الخدمة</th>
+            <th>ثمن الخدمة</th>
+            <th>وصف الخدمة</th>
+            <th>تقييم الخدمة</th>
+            <th>حذف الخدمة</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% if (locals.services) { %>
+            <% services.forEach(service => { %>
+                <tr>
+                    <td><%= service.title %></td>
+                    <td>
+                        <img src="<%= service.photo %>" alt="">
+                    </td>
+                    <td><%= service.category %></td>
+                    <td><%= service.price %></td>
+                    <td><%= service.description %></td>
+                    <td><%= service.stars %></td>
+                    <td>
+                        <a href="/delete/<%= service._id %>"><i class='bx bx-trash' ></i></a>
+                    </td>
+                </tr>
+            <% }) %>
+        <% } %>
+    </tbody>
+</table>
